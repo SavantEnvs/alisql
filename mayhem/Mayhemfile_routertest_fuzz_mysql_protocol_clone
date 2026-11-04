@@ -1,0 +1,9 @@
+project: savantenvs/alisql
+target: routertest_fuzz_mysql_protocol_clone
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/routertest_fuzz_mysql_protocol_clone/testsuite
+cmds:
+  - cmd: /mayhem/routertest_fuzz_mysql_protocol_clone
+    libfuzzer: true
+    timeout: 20

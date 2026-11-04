@@ -1,0 +1,9 @@
+project: savantenvs/alisql
+target: routerfuzz_auth_method_basic
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/routerfuzz_auth_method_basic/testsuite
+cmds:
+  - cmd: /mayhem/routerfuzz_auth_method_basic
+    libfuzzer: true
+    timeout: 20

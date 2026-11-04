@@ -1,0 +1,9 @@
+project: savantenvs/alisql
+target: routertest_fuzz_mysql_protocol_ping
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/routertest_fuzz_mysql_protocol_ping/testsuite
+cmds:
+  - cmd: /mayhem/routertest_fuzz_mysql_protocol_ping
+    libfuzzer: true
+    timeout: 20

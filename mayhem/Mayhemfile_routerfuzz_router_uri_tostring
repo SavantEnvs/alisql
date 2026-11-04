@@ -1,0 +1,9 @@
+project: savantenvs/alisql
+target: routerfuzz_router_uri_tostring
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/routerfuzz_router_uri_tostring/testsuite
+cmds:
+  - cmd: /mayhem/routerfuzz_router_uri_tostring
+    libfuzzer: true
+    timeout: 20
